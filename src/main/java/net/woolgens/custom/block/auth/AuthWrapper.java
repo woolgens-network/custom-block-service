@@ -1,4 +1,4 @@
-package net.woolgens.scaffold.auth;
+package net.woolgens.custom.block.auth;
 
 import io.quarkus.runtime.StartupEvent;
 import io.quarkus.security.spi.runtime.AuthorizationController;
