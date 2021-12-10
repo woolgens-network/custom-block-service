@@ -47,4 +47,11 @@ public class CustomBlockResource {
     public boolean delete(@PathParam("id") String id) {
         return repository.deleteById(id);
     }
+
+    @POST
+    @Path("/delete")
+    @RolesAllowed("Admin")
+    public boolean deletePost(CustomBlock block) {
+        return repository.deleteById(block.getId());
+    }
 }
