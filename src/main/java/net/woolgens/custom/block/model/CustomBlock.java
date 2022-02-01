@@ -19,5 +19,6 @@ public class CustomBlock {
     @BsonId
     private String id;
     private String type;
+    private Map<String, Long> stats;
     private Map<String, Object> properties;
 }
