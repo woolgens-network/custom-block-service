@@ -3,16 +3,13 @@ package net.woolgens.custom.block;
 import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.http.ContentType;
-import net.woolgens.custom.block.auth.AuthWrapper;
 import net.woolgens.custom.block.model.CustomBlock;
 import net.woolgens.custom.block.repository.CustomBlockRepository;
 import net.woolgens.custom.block.resource.CustomBlockResource;
-import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
-
 import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;

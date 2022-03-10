@@ -1,9 +1,8 @@
 package net.woolgens.custom.block.resource;
 
-import net.woolgens.custom.block.exception.CustomBlockException;
-import net.woolgens.custom.block.exception.impl.CustomBlockNotFoundException;
 import net.woolgens.custom.block.model.CustomBlock;
 import net.woolgens.custom.block.repository.CustomBlockRepository;
+import net.woolgens.library.microservice.exception.ServiceException;
 
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
@@ -26,10 +25,10 @@ public class CustomBlockResource {
     @GET
     @Path("/{id}")
     @RolesAllowed("Admin")
-    public CustomBlock get(@PathParam("id") String id) throws CustomBlockException {
+    public CustomBlock get(@PathParam("id") String id) throws ServiceException {
         Optional<CustomBlock> customBlockOptional = repository.findByIdOptional(id);
         if(!customBlockOptional.isPresent()) {
-            throw new CustomBlockNotFoundException();
+            throw new ServiceException(404, "CustomBlock not found");
         }
         return customBlockOptional.get();
     }

@@ -83,7 +83,7 @@
         </dependency>
         <dependency>
             <groupId>net.woolgens.library</groupId>
-            <artifactId>auth</artifactId>
+            <artifactId>microservice</artifactId>
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>
